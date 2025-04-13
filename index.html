@@ -125,18 +125,39 @@
     }
 
     .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
 
-    .skills-list li {
-      background: #e6f4ea;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-weight: bold;
-      color: #2e7d32;
-    }
+.skills-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0f2f1;
+  color: #004d40;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: default;
+  position: relative;
+}
+
+.skills-list li::before {
+  content: "⚡";
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.skills-list li:hover {
+  background: #b2dfdb;
+  transform: scale(1.05);
+}
+
+
 
     .project-card {
       background: white;
